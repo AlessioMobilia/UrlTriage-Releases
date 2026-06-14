@@ -20,6 +20,12 @@ L'applicazione:
 - raccoglie DNS completo e informazioni RDAP/WHOIS, mostrando nel report HTML
   la motivazione della decisione per ogni dominio;
 - blocca NSFW e malevolenza confermata anche quando il dominio e' popolare;
+- distingue i rilevamenti VT dalle sole categorie descrittive, protegge
+  `r2.dev` e blocca prudenzialmente i domini non popolari registrati da non
+  oltre 15 giorni;
+- segnala errori di chiave, quota, rate limit o rete VirusTotal e consente di
+  interrompere l'analisi;
+- mostra DNS, RDAP/WHOIS e dettagli VirusTotal anche nel riepilogo complessivo;
 - puo' integrare i risultati di VirusTotal;
 - genera report HTML, testuali, JSON e CSV.
 
