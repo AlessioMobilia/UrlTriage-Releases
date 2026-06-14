@@ -1,2 +1,78 @@
-# UrlTriage-Releases
-Release pubbliche e aggiornamenti di UrlTriage
+# UrlTriage
+
+UrlTriage e' un'applicazione Windows per analizzare URL e catene di redirect
+in un browser isolato, raccogliere evidenze e produrre indicazioni sui domini
+da bloccare, da non bloccare o da sottoporre a verifica.
+
+L'applicazione:
+
+- segue redirect e navigazioni controllate;
+- chiude popup, banner e overlay comuni;
+- acquisisce screenshot delle pagine e delle homepage dei domini osservati;
+- rileva categorie di contenuto, form sensibili e segnali di rischio;
+- protegge servizi condivisi, social, URL shortener, CDN e domini noti;
+- puo' integrare i risultati di VirusTotal;
+- genera report HTML, testuali, JSON e CSV.
+
+## Download
+
+Aprire la sezione [Releases](https://github.com/AlessioMobilia/UrlTriage-Releases/releases/latest)
+e scegliere uno dei pacchetti:
+
+- `UrlTriage-Setup-x64.exe`: versione consigliata, installata per il solo
+  utente corrente e aggiornata automaticamente;
+- `UrlTriage-Portable-win-x64.zip`: versione portable, da estrarre
+  completamente prima dell'avvio.
+
+I file `.sha256` permettono di verificare l'integrita dei download.
+
+## Installazione
+
+1. Scaricare `UrlTriage-Setup-x64.exe`.
+2. Avviare l'installer.
+3. Lasciare selezionata la creazione del collegamento sul desktop.
+4. Avviare UrlTriage dal desktop o dal menu Start.
+
+L'installazione non richiede privilegi amministrativi. Windows SmartScreen
+puo' mostrare un avviso perche' il pacchetto non e' firmato digitalmente.
+
+## Versione portable
+
+1. Scaricare `UrlTriage-Portable-win-x64.zip`.
+2. Estrarre tutto lo ZIP in una cartella.
+3. Avviare `UrlTriage.App.exe`.
+
+Non spostare il solo eseguibile: la cartella `.playwright` inclusa deve
+rimanere accanto all'applicazione.
+
+## Utilizzo
+
+1. Incollare gli URL oppure importarli da un file.
+2. Controllare gli URL estratti e scegliere quelli da analizzare.
+3. Configurare il profilo e la cartella di output.
+4. Inserire una chiave VirusTotal oppure disabilitare il relativo controllo.
+5. Avviare l'analisi.
+6. Aprire `report.html` per il report visuale o `report_rapido.txt` per il
+   riepilogo testuale.
+
+Nel report HTML gli screenshot possono essere ingranditi e sfogliati con i
+pulsanti Avanti/Indietro o con le frecce della tastiera.
+
+## Output
+
+Ogni sessione puo' includere:
+
+- `report.html`: report completo e visuale;
+- `report_rapido.txt`: riepilogo leggibile e defangato;
+- `results.json`: dati strutturati della sessione;
+- `to_block_domains.csv`: domini consigliati per il blocco;
+- `do_not_block_domains.csv`: domini da proteggere dal blocco;
+- `screenshots`: immagini raccolte durante la navigazione;
+- `session.db`: stato persistente della sessione.
+
+## Sicurezza
+
+UrlTriage supporta il lavoro dell'analista ma non sostituisce una valutazione
+umana. Eseguire l'applicazione in una VM o in un ambiente isolato quando si
+analizzano URL potenzialmente malevoli. Non inserire credenziali, dati
+personali o informazioni di pagamento nelle pagine visitate.
