@@ -9,6 +9,8 @@ L'applicazione:
 - segue redirect e navigazioni controllate;
 - chiude popup, banner e overlay comuni;
 - acquisisce screenshot delle pagine e delle homepage dei domini osservati;
+- separa nel report gli screenshot della navigazione standard da quelli dei
+  domini base e li adatta alle dimensioni dello schermo;
 - rileva categorie di contenuto, form sensibili e segnali di rischio;
 - protegge servizi condivisi, social, URL shortener, CDN e domini noti;
 - puo' integrare i risultati di VirusTotal;
@@ -52,11 +54,15 @@ rimanere accanto all'applicazione.
 3. Configurare il profilo e la cartella di output.
 4. Inserire una chiave VirusTotal oppure disabilitare il relativo controllo.
 5. Avviare l'analisi.
-6. Aprire `report.html` per il report visuale o `report_rapido.txt` per il
+6. Nella scheda Analisi selezionare un dominio navigato per riaprirlo nel
+   browser e completare eventuali CAPTCHA o challenge.
+7. Aprire `report.html` per il report visuale o `report_rapido.txt` per il
    riepilogo testuale.
 
 Nel report HTML gli screenshot possono essere ingranditi e sfogliati con i
-pulsanti Avanti/Indietro o con le frecce della tastiera.
+pulsanti Avanti/Indietro o con le frecce della tastiera. Le informazioni
+principali sono mostrate subito; form, segnali e altri dettagli sono raccolti
+in una sezione espandibile.
 
 ## Output
 
