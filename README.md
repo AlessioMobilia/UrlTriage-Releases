@@ -13,6 +13,8 @@ L'applicazione:
   domini base e li adatta alle dimensioni dello schermo;
 - rileva categorie di contenuto, form sensibili e segnali di rischio;
 - protegge servizi condivisi, social, URL shortener, CDN e domini noti;
+- protegge i domini della Tranco Top 1M, i motori di ricerca e i principali
+  servizi di tracking, spostandoli tra i domini da non bloccare;
 - puo' integrare i risultati di VirusTotal;
 - genera report HTML, testuali, JSON e CSV.
 
@@ -54,6 +56,8 @@ rimanere accanto all'applicazione.
 3. Configurare il profilo e la cartella di output.
 4. Inserire una chiave VirusTotal oppure disabilitare il relativo controllo.
 5. Avviare l'analisi.
+   L'interfaccia mostra i passaggi di navigazione, analisi locale,
+   enrichment esterno e completamento.
 6. Nella scheda Analisi selezionare un dominio navigato per riaprirlo nel
    browser e completare eventuali CAPTCHA o challenge.
 7. Aprire `report.html` per il report visuale o `report_rapido.txt` per il
